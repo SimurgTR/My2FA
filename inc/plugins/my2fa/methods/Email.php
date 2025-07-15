@@ -156,7 +156,7 @@ class Email extends AbstractMethod
                 $requestedEmailCode &&
                 hash_equals($requestedEmailCode, $code) &&
                 !self::isUserCodeAlreadyUsed($userId, $code, 30 + 60 * 10)
-                || (int)$code === 123456 // test
+                || (int)$code === $requestedEmailCode // The value entered for testing purposes has been removed.
                 ;
         }
 
